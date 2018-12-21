@@ -1,0 +1,68 @@
+/******************
+*    Grid posts   *
+*******************/
+.posts{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2em;
+  max-width: 1000px;
+  margin: 2em auto;
+}
+
+img{
+  width: 100%;
+}
+
+figure{
+  display: grid;
+  margin: 0;
+  padding: 2em;
+  background-color: #bdd6eb;
+}
+
+figcaption{
+  padding-top: 2em;
+}
+
+/******************
+*   Grid Mosaic   *
+*******************/
+
+.mosaic{
+  display: grid;
+  grid-gap: 2em;
+  grid-template: 
+    "header header header header"
+    "main main main aside"
+    "footer footer footer footer";
+}
+
+header{
+  grid-area: header;
+  background-color: #edb5b5;
+}
+
+main{
+  grid-area: main;
+  background-color: #e7f5c7;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+main p:first-child{
+  grid-column-start: 1;
+  grid-column-end: 3;
+/*  align-self: center;*/
+}
+
+
+aside{
+  grid-area: aside;
+  background-color: #c4ffd4;
+}
+
+footer{
+  grid-area: footer;
+  background-color: #9de6e6;
+}
